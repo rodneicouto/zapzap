@@ -1,0 +1,10 @@
+{
+  "default": {
+  },
+  "development": {
+    "MESSAGES": "messages.txt"
+  },
+  "production": {
+
+  }
+}

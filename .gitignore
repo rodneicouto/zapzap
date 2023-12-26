@@ -1,3 +1,7 @@
 node_modules
 yarn-error.log
 *.zip
+zapzap.log
+.forever
+save_pid.txt
+scripts/zapzap.log

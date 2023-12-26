@@ -31,7 +31,7 @@ export async function receiveMessage(userId, message) {
         //primeira msg
         let initial = messages['_initial_'];
         addToTemporaryData(userId, initial.id);
-        return initial.conteudo;        
+        return `${initial.conteudo}\n\n${initial.menu}`;
     }
     currentMessage = messages[currentMessage];
     console.log(currentMessage);

@@ -20,7 +20,7 @@ Em que posso ajudar?
 >> 5 -> 6
 >> 6 -> 7
 
-::1 
+::1t 
 
 Obrigada por entrar em contato. 
 Tenha um dia abençoado,
@@ -32,7 +32,7 @@ secretária virtual
 
 Fico feliz pela confiança e tenho certeza que Dr. Renan fica grato pela preferência.
 
-As consultas são realizadas na Clínica Cardiolife de Lorena - SP ou no Hospital da Unimed de São Lourenço - MG - EM BREVE -.
+As consultas são realizadas na Clínica Cardiolife de Lorena - SP ou no Hospital da Unimed de São Lourenço - MG.
 
 Na clínica Cardiolife, os atendimentos podem ser agendados pelos números *(12) 3301-6716* / *(12) 99177-3948* / *(12) 3301-6769* / *(12) 3152-4404*, de segunda a quinta, das 8h às 19h e sexta, das 8h às 17h.
 
@@ -47,14 +47,14 @@ S- Sim
 N- Não
 
 >> S OR Sim -> 0
->> N OR Nao OR Não -> 1
+>> N OR Nao OR Não -> 1t
 
 ::3 
 Fico feliz pela confiança e tenho certeza que Dr. Renan fica grato pela preferência.
 
 Imagino que o(a) senhor(a) ou algum ente querido possa estar com um problema de saúde. Sei que tal situação gera ansiedade e preocupação. Por isso, tentarei ajudá-lo(a) da melhor maneira.
 
-Dr. Renan atua na região do Circuito das Águas/MG e Vale do Paraíba/SP e presta serviço em diferentes instituições, que incluem o Hospital de Carmo de Minas (exames endoscópicos), Hospital São Lourenço (cirurgias), Hospital da Unimed de São Lourenço (consultas, cirurgias e exames endoscópicos ) - EM BREVE -, Clínica CardioLife de Lorena (consultas) e também a Santa Casa de Lorena (cirurgias e exames endoscópicos).
+Dr. Renan atua na região do Circuito das Águas/MG e Vale do Paraíba/SP e presta serviço em diferentes instituições, que incluem o Hospital de Carmo de Minas (exames endoscópicos), Hospital São Lourenço (cirurgias), Hospital da Unimed de São Lourenço (consultas, cirurgias e exames endoscópicos ), Clínica CardioLife de Lorena (consultas) e também a Santa Casa de Lorena (cirurgias e exames endoscópicos).
 
 Entre em contato diretamente via chamada telefônica e explique a situação. 
 
@@ -67,14 +67,14 @@ S- Sim
 N- Não
 
 >> S OR Sim -> 0
->> N OR Nao OR Não -> 1
+>> N OR Nao OR Não -> 1t
 
 
 ::4 
 
 Fico feliz pela confiança e tenho certeza que Dr. Renan fica grato pela preferência.
 
-Os exames endoscópicos (endoscopia digestiva alta, colonoscopia, retossigmoidoscopia flexível, colangiopancreatografia retrógrada endoscópica e/ou demais) são realizados pelo Dr. Renan no Setor de Endoscopia do Hospital de Carmo de Minas (exceto, CPRE), Hospital da Unimed de São Lourenço (exceto, CPRE) - EM BREVE- e Santa Casa de Lorena.
+Os exames endoscópicos (endoscopia digestiva alta, colonoscopia, retossigmoidoscopia flexível, colangiopancreatografia retrógrada endoscópica e/ou demais) são realizados pelo Dr. Renan no Setor de Endoscopia do Hospital de Carmo de Minas (exceto, CPRE), Hospital da Unimed de São Lourenço (exceto, CPRE) e Santa Casa de Lorena.
 
 Os exames podem ser agendados nas referidas instituições, havendo esclarecimentos, orientações, fornecimento de termo de consentimento livre e esclarecido e preparo específico no momento da marcação. 
 
@@ -90,7 +90,7 @@ S- Sim
 N- Não
 
 >> S OR Sim -> 0
->> N OR Nao OR Não -> 1
+>> N OR Nao OR Não -> 1t
 
 
 ::5 
@@ -108,7 +108,7 @@ S- Sim
 N- Não
 
 >> S OR Sim -> 0
->> N OR Nao OR Não -> 1
+>> N OR Nao OR Não -> 1t
 
 
 ::6 
@@ -124,9 +124,13 @@ Encaminhareis a mensagem ao Dr. Renan imediatamente e logo retornarei com a(s) r
 Vamos tentar respondê-lo o mais rapidamente possível!
 
 Atenção! preciso tocar em um ponto importante. Se a razão do contato é um problema de saúde que não apresenta melhora ou está agravando, é importante que agende uma consulta ou siga para o pronto-socorro mais próximo de sua localidade para avaliação. Teleconsultas não são realizadas por este aplicativo.
-Dr. Renan atua na região do Circuito das Águas/MG e Vale do Paraíba/SP e presta serviço em diferentes instituições, que incluem o Hospital de Carmo de Minas (exames endoscópicos), Hospital São Lourenço (cirurgias), Hospital da Unimed de São Lourenço (consultas, cirurgias e exames endoscópicos) - EM BREVE - , Clínica CardioLife de Lorena (consultas) e também a Santa Casa de Lorena (cirurgias e exames endoscópicos).
+Dr. Renan atua na região do Circuito das Águas/MG e Vale do Paraíba/SP e presta serviço em diferentes instituições, que incluem o Hospital de Carmo de Minas (exames endoscópicos), Hospital São Lourenço (cirurgias), Hospital da Unimed de São Lourenço (consultas, cirurgias e exames endoscópicos), Clínica CardioLife de Lorena (consultas) e também a Santa Casa de Lorena (cirurgias e exames endoscópicos).
 
 É um imenso prazer poder ajudá-lo.
+
+== menu 
+
+>> * -> 8a
 
 ::7 
 
@@ -134,7 +138,15 @@ Fico feliz pela confiança e tenho certeza que Dr. Renan fica grato pela prefer�
 Estou aqui para ajudá-lo(a). Me conte o motivo do seu contato.
 
 Atenção! preciso tocar em um ponto importante. Se a razão do contato é um problema de saúde que não apresenta melhora ou está agravando, é importante que agende uma consulta ou siga para o pronto-socorro mais próximo de sua localidade para avaliação. Teleconsultas não são realizadas por este aplicativo.
-Dr. Renan atua na região do Circuito das Águas/MG e Vale do Paraíba/SP e presta serviço em diferentes instituições, que incluem o Hospital de Carmo de Minas (exames endoscópicos), Hospital São Lourenço (cirurgias), Hospital da Unimed de São Lourenço (cirurgias e exames endoscópicos) - EM BREVE - , Clínica CardioLife de Lorena (consultas) e também a Santa Casa de Lorena (cirurgias e exames endoscópicos).
+Dr. Renan atua na região do Circuito das Águas/MG e Vale do Paraíba/SP e presta serviço em diferentes instituições, que incluem o Hospital de Carmo de Minas (exames endoscópicos), Hospital São Lourenço (cirurgias), Hospital da Unimed de São Lourenço (cirurgias e exames endoscópicos), Clínica CardioLife de Lorena (consultas) e também a Santa Casa de Lorena (cirurgias e exames endoscópicos).
 
 É um imenso prazer poder ajudá-lo.
+
+== menu 
+
+>> * -> 8a
+
+::8a
+
+Obrigado por nos procurar! O Dr. Renan entrará em contato em breve.
 

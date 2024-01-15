@@ -33,12 +33,21 @@ client.on('ready', () => {
     console.log('Client is ready!');
 });
 
+client.on('message_create', (msg) => {
+    // Fired on all message creations, including your own
+        if (msg.fromMe) {
+            whatsappService.markToNotAnswer(msg.to)            
+        }
+});
+    
+
 client.on('message', async message => {
 	if(message.body === '!ping') {
 		message.reply('pong');
 	}
     else {
         let chat = await message.getChat();
+        console.log( 'MSG: ' + message.from + " | " + message.body);
         if (chat.isGroup) {
             //faz nada, ignora grupo
             console.log( 'ignora msg de grupo');

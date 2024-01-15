@@ -8,6 +8,8 @@ const EXPIRATION_TIME = Number(getProperty('MESSAGE_LIFETIME', '30'));
 
 const myCache = new NodeCache();
 
+const notAnswerCache = new NodeCache();
+
 let messages;
 
 function addToTemporaryData(key, value) {
@@ -18,14 +20,23 @@ export async function cleanMessage() {
     messages = undefined;
 }
 
-export async function receiveMessage(userId, message) {
-    console.log( "#####################")
-    console.log( 'from: ' + userId + " | " + message)
+export function markToNotAnswer(userId, time) {
+    if( !time) {
+        time = 12 * 60 * 60; //12horas
+    }
+    notAnswerCache.set(userId, true, time ); //12horas
+}
+
+export async function receiveMessage(userId, message) {  
     if( !messages) {
-        console.log( 'Lendo arquivos ');
+        console.log( '** Lendo Arquivos **');
         messages = await FileService.readFiles();
     }
     message = message || '';
+    if( notAnswerCache.get(userId) ) {
+        //significa q respondeu e ficara sem o bot por 12 horas
+        return null;
+    }
     let currentMessage = myCache.get(userId);
     if( !currentMessage) {
         //primeira msg
@@ -34,19 +45,26 @@ export async function receiveMessage(userId, message) {
         return `${initial.conteudo}\n\n${initial.menu}`;
     }
     currentMessage = messages[currentMessage];
-    console.log(currentMessage);
     message =  unidecode(message.toLowerCase());
-    if( currentMessage.rotas[message] != null ) {
-        let _newMessage = messages[currentMessage.rotas[message]];
+    let _messageRota = currentMessage.rotas[message];
+    if( _messageRota == null ) {
+        _messageRota = currentMessage.rotas['*'];
+    }
+    if( _messageRota != null ) {
+        let _newMessage = messages[_messageRota];
         if( _newMessage ) {
-            if(_newMessage.menu ) {
-                addToTemporaryData(userId, _newMessage.id);
-                return `${_newMessage.conteudo}\n\n${_newMessage.menu}`;
-            }
-            else {
+            addToTemporaryData(userId, _newMessage.id);
+            //verifia se o ultimo digoto do id da msg nova é T
+            if( _newMessage.id.endsWith('t')) {
+                //se for com T eh terminal e volta ao comeco
                 myCache.del(userId);
-                return `${_newMessage.conteudo}`
-            }         
+            }
+            if( _newMessage.id.endsWith('a')) {
+                myCache.del(userId);
+                //se for com A coloca 5 minutos para digitar mais 
+                markToNotAnswer(userId, 5 * 60);
+            }
+            return `${_newMessage.toString()}`            
         }               
     }
     else {

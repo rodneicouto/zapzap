@@ -6,4 +6,13 @@ export default class Mensagem {
     constructor() {
         this.rotas = {};
     }    
+  
+    toString() {
+        let _menu = this.menu ? `\n\n${this.menu}` : '';
+        return `${this.conteudo}${_menu}`;
+    }
+
+
+
+
 }

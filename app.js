@@ -38,10 +38,16 @@ client.on('message', async message => {
 		message.reply('pong');
 	}
     else {
-        let _message = await whatsappService.receiveMessage(message.from, message.body)
-        if( _message) {
-            message.reply(_message); 
-        }
+        let chat = await message.getChat();
+        if (chat.isGroup) {
+            //faz nada, ignora grupo
+            console.log( 'ignora msg de grupo');
+        } else {
+            let _message = await whatsappService.receiveMessage(message.from, message.body)
+            if( _message) {
+                message.reply(_message); 
+            }
+        }       
     }
     
 });

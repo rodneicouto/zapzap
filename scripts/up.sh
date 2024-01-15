@@ -3,7 +3,8 @@
 echo ""
 echo "---------- Iniziando zapzap"
 echo ""
+cd ..
 export NODE_ENV=development;
 export PORT=9999;
-nohup node ../bin/www.js  > zapzap.log 2>&1 &
+nohup node ./bin/www.js  > zapzap.log 2>&1 &
 echo $! > save_pid.txt
